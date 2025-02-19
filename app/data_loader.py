@@ -2,12 +2,10 @@ import json
 import requests
 
 class TwitterJson:
-        response 
-        def __init__():
-                url = "https://foyzulhassan.github.io/files/favs.json"
-                response = requests.get(url)
-                response.raise_for_status()   
+        def __init__(self):
+                self.url = "https://foyzulhassan.github.io/files/favs.json"
+                self.response = requests.get(self.url)
+                self.response.raise_for_status()   
 
-        def get_json():
-                
-                return response.json()
+        def get_json(self):
+                return self.response.json()

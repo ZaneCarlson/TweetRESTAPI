@@ -4,3 +4,4 @@ url = "https://foyzulhassan.github.io/files/favs.json"
 data = get_json(url)
 
 print(data)
+

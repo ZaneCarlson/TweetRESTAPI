@@ -1,6 +1,7 @@
 from flask import Flask
 from data_loader import TwitterJson
-from parsers import find_all_tweets
+from parsers import get_all_tweets
+from parsers import get_tweet_details
 
 app = Flask(__name__)
 
@@ -9,24 +10,23 @@ def home():
     return "Hello! Welcome to the Twitter REST API"
 
 @app.route('/all_tweets', methods=['GET'])
-def get_all_tweets():
-    return find_all_tweets(jsonObj.get_json())
+def all_tweets():
+    return get_all_tweets(jsonObj.get_json())
 
 
 @app.route('/external_links', methods=['GET'])
-def get_external_links():
+def external_links():
     data = jsonObj.get_json()
     return data
 
 
-@app.route('/get_details', methods=['GET'])
-def get_details():
-    data = jsonObj.get_json()
-    return data
+@app.route('/details/<str:tweetID>', methods=['GET'])
+def details(tweetID):
+    return get_tweet_details(jsonObj.get_json(), tweetID)
+    
 
-
-@app.route('/get_profile', methods=['GET'])
-def get_profile():
+@app.route('/profile', methods=['GET'])
+def profile():
     data = jsonObj.get_json()
     return data
     

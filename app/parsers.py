@@ -11,6 +11,3 @@ def find_all_tweets(json):
             'text': tweet['text']
         })
     return jsonify(data)
-
-
-def 

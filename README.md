@@ -2,6 +2,9 @@ Thanks for using my Twitter REST API!
 
 Here are the steps to get it working on your system:
 
+**DEPENDANCIES: Flask (install via `pip install flask` in your terminal)
+
+
 1. Install Postman or use the web version.
 
 2. Open the terminal and type `cd app` 

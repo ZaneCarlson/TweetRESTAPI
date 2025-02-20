@@ -1,0 +1,7 @@
+# These are the dependencies for multiple files: app.py, data_loader.py, parsers.py, utils.py
+data_loader
+flask
+json
+parsers
+re
+requests

@@ -18,8 +18,7 @@ def get_external_links(jsonData):
     pattern = r'https?://[^\s<>",]+'
     data = []
     for tweet in jsonData:
-        tweetStr = json.dumps(tweet)
-        links = re.findall(pattern, tweetStr)
+        links = re.findall(pattern, tweet['text'])
         data.append({
             'id': tweet['id'],
             'links': links
